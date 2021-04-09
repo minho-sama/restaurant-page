@@ -1,4 +1,5 @@
 // végén budget app alapján rendezni h szebb legyen? az a baj mindig selectelni kell újra a home contentet meg ilyenek....
+//az is lehet h mindegyikhez ugyanazt az eventet rakom be, csak mást kell betölteniük aszerint h mi van a classList-ben
 
 // import {loadContacts} from './contact.js'
 
@@ -10,7 +11,7 @@ loadTitle()
 loadNavbar()
 loadHome()
 
-
+//tab scwitching logic
 const content = document.querySelector('#content')
 
 class UI {
@@ -21,12 +22,16 @@ class UI {
 
             const menuContent = document.querySelector('.menu')
             const homeContent = document.querySelector('.home')
+            const contactContent = document.querySelector('.contact')
 
         if (content.lastChild.classList == 'menu'){
             content.removeChild(menuContent)
         }
         else if(content.lastChild.classList == 'home'){
             content.removeChild(homeContent)
+        }
+        else if(content.lastChild.classList == 'contact'){
+            content.removeChild(contactContent)
         }
 
         loadContact()
@@ -36,15 +41,19 @@ class UI {
         const menu = document.querySelector('#menu');
         menu.addEventListener('click', () => {
             
-            const contactContent = document.querySelector('.contact')
+            const menuContent = document.querySelector('.menu')
             const homeContent = document.querySelector('.home')
+            const contactContent = document.querySelector('.contact')
 
-            if (content.lastChild.classList == 'home'){
-                content.removeChild(homeContent)
-            }
-            else if(content.lastChild.classList == 'contact'){
-                content.removeChild(contactContent)
-            }
+        if (content.lastChild.classList == 'menu'){
+            content.removeChild(menuContent)
+        }
+        else if(content.lastChild.classList == 'home'){
+            content.removeChild(homeContent)
+        }
+        else if(content.lastChild.classList == 'contact'){
+            content.removeChild(contactContent)
+        }
 
             loadMenu() 
         })
@@ -53,15 +62,19 @@ class UI {
         const home = document.querySelector('#home');
         home.addEventListener('click', () => {
 
-            const contactContent = document.querySelector('.contact')
             const menuContent = document.querySelector('.menu')
+            const homeContent = document.querySelector('.home')
+            const contactContent = document.querySelector('.contact')
 
-            if (content.lastChild.classList == 'menu'){
-                content.removeChild(menuContent)
-            }
-            else if(content.lastChild.classList == 'contact'){
-                content.removeChild(contactContent)
-            }
+        if (content.lastChild.classList == 'menu'){
+            content.removeChild(menuContent)
+        }
+        else if(content.lastChild.classList == 'home'){
+            content.removeChild(homeContent)
+        }
+        else if(content.lastChild.classList == 'contact'){
+            content.removeChild(contactContent)
+        }
 
             loadHome() 
         })
