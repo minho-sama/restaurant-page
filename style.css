@@ -1,0 +1,66 @@
+body{
+    margin:0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.titleBar{
+    color:rgb(241, 241, 1);
+    background-color: rgb(144, 212, 144);
+    height: 75px;
+    display:flex;
+}
+
+#pesto{
+    height: 75px;
+}
+
+#title{
+    margin-left: 50px;
+
+}
+
+.navbar{
+    color: rgb(144, 212, 144);
+    background-color: rgb(241, 241, 1) ;
+    height: 60px;
+    width: 100%;
+}
+.navbar li{
+    display:inline;
+    float:right;
+    padding: 17px; 
+    font-size: 20px;
+}
+
+
+.navbar li:hover{
+    text-decoration: underline;
+}
+
+.home{
+    display:flex;
+    height: 650px;
+    background-color:rgb(206, 245, 206)
+}
+
+
+.home p{
+    margin:auto;
+    background-color: rgb(247, 185, 188);
+    font-size: 70px;
+    padding: 30px;
+    color: rgb(236, 236, 48) ;
+
+}
+
+.contact{
+    display:grid;
+    grid-template-columns: repeat (3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.box3{
+    grid-column: 3/4;
+    border: 3px solid rgb(226, 126, 126);
+    background-color: rgb(224, 140, 140);
+}
